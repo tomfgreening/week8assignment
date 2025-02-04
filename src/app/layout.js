@@ -1,3 +1,6 @@
+// This layout file is the blueprint for all the pages.
+// Layout files can also be nested into page folders if you want to override the layout file and change something for a specific page of the app.
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
