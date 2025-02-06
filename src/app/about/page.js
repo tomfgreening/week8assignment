@@ -1,11 +1,20 @@
 // pages need to be made inside corresponding folders. The about page for my website needs to be inside a folder called "about", same idea for "contact", "menu" etc.
 
 // 💭 This is the equivalent of creating a new route in React Router, but instead of defining a route in a <Route /> component, we create a new folder - with the page name - and page.js file in the /app directory.
-
+import Image from "next/image";
+import acidavianimg from "@/../public/Assets/Images/acidavian.jpg";
 export default function AboutPage() {
   return (
     <>
       <h1> About Page </h1>
+      <Image
+        src={acidavianimg}
+        alt={"Photograph of Jake Kelly AKA Acid Avian"}
+        width={400}
+        height="fill"
+        priority="false"
+        placeholder="blur"
+      />
       Founded by Jake Kelly, a Brighton-based vegan DJ, our restaurant is more
       than just a dining experience – it’s a celebration of flavour, community,
       and sustainability. Jake has been a fixture of Brighton’s vibrant music
