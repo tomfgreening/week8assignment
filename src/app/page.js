@@ -1,5 +1,5 @@
 import Rows from "@/components/rows";
-import PostsPage from "./Utilities/dbConnection";
+import PostsPage from "./posts/page";
 
 export default function HomePage() {
   return (
