@@ -13,7 +13,8 @@ export default async function PostsPage() {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            {post.photourl} {post.photographer}
+            <img src={post.photourl}/>
+            <p> Photo by {post.photographer}</p>
           </li>
         ))}
       </ul>
