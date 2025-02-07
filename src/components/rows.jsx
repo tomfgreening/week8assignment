@@ -12,19 +12,12 @@ import photo9 from "@/../public/Assets/Images/photo9.jpg";
 import photo10 from "@/../public/Assets/Images/photo10.jpg";
 import acidavian from "@/../public/Assets/Images/acidavian.jpg";
 
-export default function Rows() {
-  return (
-    <container className={rowStyles.rows}>
-      
-    </container>
-  );
-}
+
 
 export default async function PostsPage() {
   const posts = (await db.query("SELECT * FROM posts")).rows;
-
   return (
-    <div>
+    <container className={rowStyles.rows}> 
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -33,6 +26,6 @@ export default async function PostsPage() {
           </li>
         ))}
       </ul>
-    </div>
+  </container>
   );
 }
