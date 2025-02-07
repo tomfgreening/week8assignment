@@ -5,12 +5,11 @@ import headerStyles from "@/components/header.module.css";
 export default function Header() {
   return (
     <header className={headerStyles.header}>
-      <h1>Main app title</h1>
+      <h1>Your favourite photoblog</h1>
       <nav>
         <Link href={"/"}> Home </Link>
         <Link href={"/about"}> About us </Link>
         <Link href={"/contact"}> Get in touch </Link>
-        <Link href={"/posts/1"}> Post 1 </Link>
       </nav>
     </header>
   );
