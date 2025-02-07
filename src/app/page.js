@@ -3,6 +3,7 @@ export default function HomePage() {
     <>
     <h1>Juicy Jakes Homepage </h1>
     <h3>Passion for plant-based</h3>
+    {/* /rows  */}
     </>
   )
 }
