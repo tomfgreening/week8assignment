@@ -1,13 +1,28 @@
-.rows {
+.rows{
+    background-color: lightgray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
     margin: 10px;
     justify-content: space-between;
-    
 } 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 /* .rows {
     display: grid;
     grid-template-columns: repeat(var(--numcols, 3), 1fr);
@@ -19,3 +34,5 @@
 }  */
 
 /* Above is the styling code I took from the square enix website. I will use this an outline. */
+
+
