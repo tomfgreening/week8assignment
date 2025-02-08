@@ -1,8 +1,6 @@
 import pg from "pg";
 
 const dbConnectionString = process.env.DATABASEURL;
-const db = new pg.Pool({
+export const db = new pg.Pool({
   connectionString: dbConnectionString,
 });
-
-export default db;
