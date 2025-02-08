@@ -1,12 +1,21 @@
-.rows {
+/* .rows {
+    background-color: black;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: row;
     gap: 5px;
     margin: 10px;
-    justify-content: space-between;
-    
-} 
+}  */
+
+
+  .rows li {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+  }
 
 /* .rows {
     display: grid;
