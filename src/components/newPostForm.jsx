@@ -1,34 +1,18 @@
 export default function newPostForm() {
-    //function to handle submit --> onSubmit listener (event)
-    //In a server component, we cannot use events --> we are going to use a server action!
-    // a server action is an async function that runs in the server specifically
     async function handleSubmit(formValues) {
       "use server";
-      //I want to store the formValues --> state
-      //I cannot use state and useState in the server --> I will "get" the formValues from the inputs directly
       const photoURL = formValues.get("photo_url");
       const photographer = formValues.get("photographer");
       const uploadedBy = formValues.get("your_name");
       const altText = formValues.get("alt_text");
-
-      //I can send the formValues data to the data with a SQL query right here in the server!
       db.query(
-        `INSERT INTO posts (bird_name, bird_size, fluffiness, bird_colour, personality) VALUES ($1, $2, $3, $4)`,
-        [birdName, birdSize, fluffiness, birdColour, personality]
+        `INSERT INTO posts (photo_url, photographer, your_name, alt_text) VALUES ($1, $2, $3, $4)`,
+        [photoURL, photographer, uploadedBy, altText]
       );
-  
-      //two Next.js tools to improve the UX
-      //revalidatePath checks if there is new data to render on a particular location
-      revalidatePath("/birds");
-      //we can also redirect the user automatically after they submit the form, so they can see the new bird added on the page
-      redirect("/birds");
     }
-  
     return (
       <>
-        <h1>Add a new bird to the website</h1>
-        {/* we are going to add a form in here, same as usual */}
-        {/* remember to add some validation to make sure your data is as precise as possible! */}
+        <h2>Upload your favourite photograph to the photoblog!</h2>
         <form action={handleSubmit}>
           <label htmlFor="bird_name">Bird name: </label>
           {/* the name attribute gives an identifier to the input, so I can target each input specifically */}
