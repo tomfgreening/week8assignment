@@ -1,3 +1,4 @@
+import { db } from "@/Utilities/dbConnection";
 export default function newPostForm() {
     async function handleSubmit(formValues) {
       "use server";
@@ -14,47 +15,35 @@ export default function newPostForm() {
       <>
         <h2>Upload your favourite photograph to the photoblog!</h2>
         <form action={handleSubmit}>
-          <label htmlFor="bird_name">Bird name: </label>
-          {/* the name attribute gives an identifier to the input, so I can target each input specifically */}
-          {/* it is recommended that the name attribute value matches the table column where the data will be stored */}
+          <label htmlFor="photo_url">Upload photograph URL: </label>
           <input
             type="text"
-            name="bird_name"
-            id="bird_name"
+            name="photourl"
+            id="photourl"
             className="text-emerald-600"
           />
   
-          <label htmlFor="bird_size">Bird size: </label>
+          <label htmlFor="photographer">Photographer name: </label>
           <input
             type="text"
-            name="bird_size"
-            id="bird_size"
+            name="photographer"
+            id="photographer"
             className="text-emerald-600"
           />
   
-          <label htmlFor="fluffiness">Fluffiness: </label>
+          <label htmlFor="your_name">Your name: </label>
           <input
-            type="number"
-            name="fluffiness"
-            id="fluffiness"
-            min={1}
-            max={10}
+            type="text"
+            name="uploaded_by"
+            id="uploaded_by"
             className="text-emerald-600"
           />
   
-          <label htmlFor="bird_colour">Colour: </label>
+          <label htmlFor="alt_text">Alt text </label>
           <input
             type="text"
-            name="bird_colour"
-            id="bird_colour"
-            className="text-emerald-600"
-          />
-  
-          <label htmlFor="personality">Personality: </label>
-          <input
-            type="text"
-            name="personality"
-            id="personality"
+            name="alt"
+            id="alt"
             className="text-emerald-600"
           />
   
@@ -62,7 +51,7 @@ export default function newPostForm() {
             type="submit"
             className="border-amber-600 border-4 m-4 hover:bg-sky-700"
           >
-            Submit your bird
+            Submit
           </button>
         </form>
       </>
