@@ -1,6 +1,6 @@
 import rowStyles from "@/components/rows.module.css";
-import { db } from "@/app/Utilities/dbConnection"
-export default async function PostsPage() {
+import { db } from "@/app/Utilities/dbConnection";
+export default async function PhotoPosts() {
   const posts = (await db.query("SELECT * FROM posts")).rows;
   return (
     <container className={rowStyles.rows}>
