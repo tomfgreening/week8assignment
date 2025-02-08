@@ -12,7 +12,7 @@
 // The params prop is used make dynamic URLs posts/post1, for example. In the above example, we are calling a user post by it's id. Hence the {idParams.id
 
 import { db } from "@/app/Utilities/dbConnection"
-export default function newPostForm() {
+export default function NewPostForm() {
     async function handleSubmit(formValues) {
       "use server";
       const photoURL = formValues.get("photo_url");

@@ -1,10 +1,12 @@
 import PhotoPosts from "@/components/photoPosts";
+import NewPostForm from "./posts/page";
 export default function HomePage() {
   return (
     <>
       <h1>Ph0t0Bl0g </h1>
       <h3>Get inspired</h3>
       <PhotoPosts />
+      <NewPostForm />
     </>
   );
 }
